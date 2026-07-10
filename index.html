@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#2563eb" />
+  <title>Campus Cares Planner</title>
+  <link rel="stylesheet" href="./styles.css?v=20260710-subtask-times-14" />
+</head>
+<body>
+  <div id="appShell" class="app-shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">Campus Cares</div>
+        <h1>Planner</h1>
+      </div>
+      <div class="top-actions">
+        <div id="syncPill" class="sync-pill loading"><span class="spinner"></span><span>Starting…</span></div>
+        <button id="printBtn" class="ghost-btn" type="button">Print</button>
+        <button id="resetDoneBtn" class="ghost-btn" type="button">Reset checks</button>
+        <button id="historyBtn" class="ghost-btn" type="button">History</button>
+        <button id="signOutBtn" class="ghost-btn hidden" type="button">Sign out</button>
+      </div>
+    </header>
+
+    <main id="authView" class="auth-view card">
+      <div class="auth-copy">
+        <div class="eyebrow">Firebase-first rebuild</div>
+        <h2>Sign in to load your cloud planner.</h2>
+        <p>This version waits for Firebase before letting you edit, so an incognito tab cannot silently create a blank session over your work.</p>
+      </div>
+      <form id="authForm" class="auth-form">
+        <label>Email<input id="emailInput" type="email" autocomplete="email" required /></label>
+        <label>Password<input id="passwordInput" type="password" autocomplete="current-password" required /></label>
+        <div class="button-row">
+          <button class="primary-btn" id="signInBtn" type="submit">Sign in</button>
+          <button class="secondary-btn" id="createAccountBtn" type="button">Create account</button>
+        </div>
+        <button id="resetPasswordBtn" class="link-btn" type="button">Send password reset</button>
+      </form>
+    </main>
+
+    <main id="loadingView" class="loading-view card hidden">
+      <div class="big-spinner"></div>
+      <h2>Loading Firebase…</h2>
+      <p>The planner stays locked until the cloud check finishes.</p>
+    </main>
+
+    <main id="emptyCloudView" class="empty-cloud card hidden">
+      <div class="eyebrow">No new planner found</div>
+      <h2>Start fresh or import your old planner?</h2>
+      <p id="legacyHint">Checking for old planner data…</p>
+      <div class="button-row wrap">
+        <button id="importLegacyBtn" class="primary-btn hidden" type="button">Import old planner</button>
+        <button id="startFreshBtn" class="secondary-btn" type="button">Start new planner</button>
+      </div>
+    </main>
+
+    <main id="plannerView" class="planner hidden">
+      <nav id="plannerTabs" class="tabs" aria-label="Planner sections">
+        <div class="floating-nav-head">
+          <button id="navDragHandle" class="nav-drag-handle" type="button" aria-label="Move navigation" title="Drag to move">⋮⋮</button>
+          <span class="floating-nav-label">Navigation</span>
+          <button id="navUndockBtn" class="nav-undock-btn hidden" type="button" aria-label="Undock navigation" title="Undock navigation">↗</button>
+          <button id="navCollapseBtn" class="nav-collapse-btn" type="button" aria-label="Collapse navigation" title="Collapse navigation">−</button>
+        </div>
+        <button class="tab" data-tab="dashboard">Dashboard</button>
+        <button class="tab" data-tab="tasks">Tasks</button>
+        <button class="tab active" data-tab="calendar">Calendar</button>
+        <button class="tab" data-tab="locations">Locations</button>
+        <button class="tab" data-tab="unfinished">Unfinished</button>
+        <button class="tab" data-tab="tracked">Tracked Tasks</button>
+      </nav>
+
+      <section id="dashboardTab" class="tab-panel"></section>
+      <section id="tasksTab" class="tab-panel"></section>
+      <section id="calendarTab" class="tab-panel active"></section>
+      <section id="locationsTab" class="tab-panel"></section>
+      <section id="unfinishedTab" class="tab-panel"></section>
+      <section id="trackedTab" class="tab-panel"></section>
+    </main>
+  </div>
+
+  <div id="modalRoot" class="modal-root hidden"></div>
+  <div id="toastRoot" class="toast-root"></div>
+
+  <script type="module" src="./src/app.js?v=20260710-subtask-times-14"></script>
+</body>
+</html>
