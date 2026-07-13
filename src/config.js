@@ -1,4 +1,4 @@
-export const APP_VERSION = "v2026.07.10-subtask-frequency-15";
+export const APP_VERSION = "v2026.07.13-location-aware-day-copy-16";
 export const SCHEMA_VERSION = 4;
 export const FIREBASE_CONFIG = {
   apiKey: "AIzaSyDy-iIrUhzIBSjRG9FWeDRVCmeV8FsWkmw",
