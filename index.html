@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#2563eb" />
   <title>Campus Cares Planner</title>
-  <link rel="stylesheet" href="./styles.css?v=20260713-documented-issues-2" />
+  <link rel="stylesheet" href="./styles.css?v=20260719-location-filter-1" />
 </head>
 <body>
   <div id="appShell" class="app-shell">
@@ -68,6 +68,12 @@
           <button id="navUndockBtn" class="nav-undock-btn hidden" type="button" aria-label="Undock navigation" title="Undock navigation">↗</button>
           <button id="navCollapseBtn" class="nav-collapse-btn" type="button" aria-label="Collapse navigation" title="Collapse navigation">−</button>
         </div>
+        <label class="nav-location-filter">
+          <span>Location</span>
+          <select id="globalLocationFilter" aria-label="Filter planner by location">
+            <option value="all">All locations</option>
+          </select>
+        </label>
         <button class="tab" data-tab="dashboard">Dashboard</button>
         <button class="tab" data-tab="tasks">Tasks</button>
         <button class="tab active" data-tab="calendar">Calendar</button>
@@ -90,6 +96,6 @@
   <div id="modalRoot" class="modal-root hidden"></div>
   <div id="toastRoot" class="toast-root"></div>
 
-  <script type="module" src="./src/app.js?v=20260713-documented-issues-1"></script>
+  <script type="module" src="./src/app.js?v=20260719-location-filter-1"></script>
 </body>
 </html>

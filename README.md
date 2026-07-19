@@ -178,3 +178,9 @@ Tasks with subtasks are now added to the calendar immediately without opening a 
 - Each weekly subtask has its own Times per week limit.
 - Location-specific time rows only show locations that apply to the subtask.
 - Location and time dropdowns close when clicking elsewhere.
+
+## July 19, 2026 update
+- Rebuilt Tracked Tasks with a dynamic field builder.
+- Any field can be named freely, then assigned a behavior such as text, notes, number, yes/no, choice, date, date action with threshold color, or state/event history.
+- Tracked items can be generated from an existing task and its subtasks, with independent records per applicable location.
+- Date-action fields support one-click updates, MM/DD/YY display, gradual green-to-red urgency, and recent history.

@@ -1,5 +1,5 @@
-export const APP_VERSION = "v2026.07.13-location-aware-day-copy-16";
-export const SCHEMA_VERSION = 4;
+export const APP_VERSION = "v2026.07.19-dynamic-tracked-fields-17";
+export const SCHEMA_VERSION = 5;
 export const FIREBASE_CONFIG = {
   apiKey: "AIzaSyDy-iIrUhzIBSjRG9FWeDRVCmeV8FsWkmw",
   authDomain: "work-tool-72a03.firebaseapp.com",
