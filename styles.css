@@ -301,3 +301,11 @@ body.planner-workspace.nav-docked-top .app-shell{padding-top:76px}
 .location-filtered-day .assignment-row{cursor:default}
 .location-filtered-day .calendar-drag-handle{display:none}
 @media(max-width:700px){.planner.floating-nav-mode .tabs.dock-top .nav-location-filter{min-width:145px}.nav-location-filter select{font-size:10px}}
+
+/* v20: multiple date indicators and tracked editing */
+.tracked-date-badges{display:flex;flex-wrap:wrap;gap:5px;padding:0 10px 9px 28px}
+.tracked-date-badge{display:inline-flex;align-items:center;gap:5px;padding:3px 7px;border:1px solid #eaecf0;border-radius:999px;background:#f9fafb;font-size:10px;color:#667085;max-width:100%}
+.tracked-date-badge i{width:7px;height:7px;border-radius:50%;background:var(--badge-color);flex:0 0 auto}
+.tracked-date-badge span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:110px}.tracked-date-badge b{color:#344054;white-space:nowrap}
+.tracked-group-tools{display:flex;justify-content:flex-end;margin-bottom:10px}.edit-apply-note{padding:10px 12px;border-radius:10px;background:#eff8ff;color:#175cd3;font-size:13px}
+@media(max-width:560px){.tracked-date-badges{padding-left:10px}.tracked-date-badge span{max-width:80px}.tracked-group-tools .secondary-btn{width:100%}}
