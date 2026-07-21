@@ -1,4 +1,4 @@
-export const APP_VERSION = "v2026.07.19-dynamic-tracked-fields-17";
+export const APP_VERSION = "v2026.07.21-github-cache-1";
 export const SCHEMA_VERSION = 5;
 export const FIREBASE_CONFIG = {
   apiKey: "AIzaSyDy-iIrUhzIBSjRG9FWeDRVCmeV8FsWkmw",

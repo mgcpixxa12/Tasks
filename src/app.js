@@ -1,8 +1,9 @@
-import { auth, storage } from './firebase.js';
-import { DAY_NAMES, APP_VERSION } from './config.js';
-import { esc, prettyDate, addDays, mondayOf, isoDate, clamp, downloadJson, uid } from './utils.js';
-import { setSync, toast, modal, closeModal } from './ui.js';
-import { store, subscribe, selectors, actions, loadPlanner, importLegacy, startFresh, loadHistory, loadTrackedLogs, exportSessionData, importSessionData } from './store.js';
+console.info('[Campus Cares] build 20260721-github-cache-1');
+import { auth, storage } from './firebase.js?v=20260721-github-cache-1';
+import { DAY_NAMES, APP_VERSION } from './config.js?v=20260721-github-cache-1';
+import { esc, prettyDate, addDays, mondayOf, isoDate, clamp, downloadJson, uid } from './utils.js?v=20260721-github-cache-1';
+import { setSync, toast, modal, closeModal } from './ui.js?v=20260721-github-cache-1';
+import { store, subscribe, selectors, actions, loadPlanner, importLegacy, startFresh, loadHistory, loadTrackedLogs, exportSessionData, importSessionData } from './store.js?v=20260721-github-cache-1';
 import { ref, uploadBytes, getDownloadURL, deleteObject } from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-storage.js';
 import { onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, signOut } from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js';
 

@@ -1,4 +1,4 @@
-import { esc } from "./utils.js";
+import { esc } from "./utils.js?v=20260721-github-cache-1";
 
 export function toast(message, type=""){
   const root = document.getElementById("toastRoot");

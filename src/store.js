@@ -1,7 +1,7 @@
-import { db } from './firebase.js';
-import { APP_VERSION, SCHEMA_VERSION, DEFAULT_COLORS } from './config.js';
-import { uid, nowISO, bySortThenName, isoDate, mondayOf } from './utils.js';
-import { setSync, toast } from './ui.js';
+import { db } from './firebase.js?v=20260721-github-cache-1';
+import { APP_VERSION, SCHEMA_VERSION, DEFAULT_COLORS } from './config.js?v=20260721-github-cache-1';
+import { uid, nowISO, bySortThenName, isoDate, mondayOf } from './utils.js?v=20260721-github-cache-1';
+import { setSync, toast } from './ui.js?v=20260721-github-cache-1';
 import { collection, doc, getDoc, getDocs, setDoc, deleteDoc, writeBatch, serverTimestamp, query, orderBy, limit } from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js';
 
 const DAY_LABELS=['Monday','Tuesday','Wednesday','Thursday','Friday'];
