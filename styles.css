@@ -402,3 +402,12 @@ body.planner-workspace.nav-docked-top .app-shell{padding-top:76px}
 .report-tracked-group.open .report-tracked-group-chevron{transform:rotate(180deg)}
 .report-tracked-group-body{border-top:1px solid #e4e7ec;background:#f8fafc}
 .report-tracked-group-body[hidden]{display:none!important}
+
+
+/* Documented issue photo viewer and bandwidth-friendly thumbnails */
+.issue-photo,.report-issue-photo{cursor:zoom-in}
+.photo-lightbox{position:fixed;inset:0;z-index:10000;background:rgba(15,23,42,.92);display:grid;place-items:center;padding:24px}
+.photo-lightbox img{max-width:min(96vw,1600px);max-height:92vh;object-fit:contain;border-radius:12px;box-shadow:0 24px 80px rgba(0,0,0,.45)}
+.photo-lightbox-close{position:fixed;top:14px;right:18px;width:48px;height:48px;border:1px solid rgba(255,255,255,.35);border-radius:999px;background:rgba(15,23,42,.75);color:#fff;font-size:32px;line-height:1;cursor:pointer}
+.photo-lightbox-close:focus-visible{outline:3px solid #93c5fd;outline-offset:3px}
+@media(max-width:650px){.photo-lightbox{padding:10px}.photo-lightbox-close{top:8px;right:8px}}
