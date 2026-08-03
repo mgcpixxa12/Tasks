@@ -184,3 +184,19 @@ Tasks with subtasks are now added to the calendar immediately without opening a 
 - Any field can be named freely, then assigned a behavior such as text, notes, number, yes/no, choice, date, date action with threshold color, or state/event history.
 - Tracked items can be generated from an existing task and its subtasks, with independent records per applicable location.
 - Date-action fields support one-click updates, MM/DD/YY display, gradual green-to-red urgency, and recent history.
+
+## August 3, 2026 — Boss activity report
+
+This build adds a read-only share link under **Share Boss Log**. The report includes current daily-task status, completion/reopen activity, tracked-task values, and tracked-task activity.
+
+Add the following rule alongside the existing private planner rules. The token is intentionally unguessable and the report contains only the flattened report snapshot, not the private planner collections.
+
+```text
+match /campusCaresPublicReports/{token} {
+  allow read: if true;
+  allow create, update, delete: if request.auth != null
+    && request.resource.data.ownerUid == request.auth.uid;
+}
+```
+
+The report snapshot includes `ownerUid`, allowing the owner-only write rule above.
