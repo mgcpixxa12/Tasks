@@ -201,15 +201,9 @@ match /campusCaresPublicReports/{token} {
 
 The report snapshot includes `ownerUid`, allowing the owner-only write rule above.
 
-
-## Cloudinary photo safeguards (August 3, 2026)
-
-- Photos are resized to a maximum side of 1400 pixels and converted to JPEG at 78% quality before upload when needed.
-- Files larger than 25 MB are rejected before upload.
-- Display images use Cloudinary automatic format and economical quality transformations, while the original URL remains saved.
-- Images load lazily and open in an in-app full-screen viewer.
-- Failed uploads retry once and can be canceled.
-
-### Important deletion limitation
-
-This is a static GitHub Pages application using unsigned Cloudinary uploads. It cannot securely delete Cloudinary assets because deletion requires a signed server-side request containing the Cloudinary API secret. Deleting a documented issue removes it from Firestore, but its uploaded image may remain in Cloudinary. Do not put the API secret in browser JavaScript. Periodically remove unused assets from the Cloudinary Media Library if necessary.
+## August 3 partial-completion update
+- Calendar subtasks can be checked independently. The parent task becomes complete only when every selected subtask is complete.
+- The Unfinished tab lists only the missed subtasks for partially completed calendar work.
+- Linked tracked tasks automatically update their selected date fields when calendar work is completed. Edit a tracked item/group to select one or more date fields; when none are explicitly selected, the first date field is used.
+- Manual tracked tasks can create non-calendar tracked items by entering one item per line.
+- The planner button now opens the boss log; the share/copy control is on the boss-log page.
